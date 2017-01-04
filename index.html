@@ -1,0 +1,664 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Doing Data Science In Silicon Valley</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section data-markdown>
+				    <script type="text/template">
+				        # <font color="lightblue"><b>Doing Data Science in Silicon Valley <font color="lightblue"><b>
+				        #### <font color="FF5A5F"><b>我的資料科學之路 </b></font>
+				        #### Sample Size N = 1
+				    </script>
+				</section>
+
+				<section id="fragments">
+			    	<h2>Overview</h2>
+			    	<p class="fragment"> Self-Introduction <font color="FF5A5F"><b>(自介)</b></font> </p>
+					<p class="fragment"> How To Tell A Fake DS From A Real One? <font color="FF5A5F"><b>(定應資料科學家)</b></font> </p>
+					<p class="fragment"> What Do DS Do All Day? <font color="FF5A5F"><b>(資料科學家的工作內容)</b></font> </p>
+					<p class="fragment"> A Working Example From My Recent Project <font color="FF5A5F"><b>(專案與範例)</b></font> </p>
+					<p class="fragment"> Becoming A Data Scientist <font color="FF5A5F"><b>(如何成為ㄧ位資料科學家)</b></font> </p>
+					<p class="fragment"> Parting Thoughts <font color="FF5A5F"><b>(給大家的小小建議)</b></font> </p>
+					<p class="fragment"> Open Q&A <font color="FF5A5F"><b>(公開問答)</b></font></p>
+				</section>
+
+				<section>
+					<h2>Remember, Sample Size N = 1</h2>
+					<p class="fragment"> <a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004961">Provide Assessments of Variability </a></p>
+				    <p class="fragment" align="center">
+					  <img src="sample_size_1.png" width="1400" height="380" align="center">
+					</p>
+				</section>	
+
+				<section>
+					<h2>自我介紹</h2>
+				    <p class="fragment" align="center">
+					  <img src="experience.png" width="1000" height="450" align="center">
+					</p>
+				</section>	
+
+				<section>
+					<section>
+				    	<h2> A Brief History Of Data Science </h2>
+				    	<p class="fragment"> The term <font color="orange"><b>"Data Scientist"</b></font> was coined by Jeff Hammerbatcher and DJ Patil circa 2008. </p>
+				    	<p class="fragment"> Jeff was leading the first data team at <font color="orange"><b>Facebook</b></font> then, and DJ Patil was leading the data team at <font color="orange"><b>Linkedin</b></font>. </p>
+				    </section>
+
+				    <section>
+				    	<h2> A Brief History Of Data Science </h2>
+				    	<p class="fragment"> <i>"Around 4Q05 they decided to establish a <font color="orange"><b>'reporting and analytics'</b></font> function that was more like traditional DW/BI, and to hire a <font color="orange"><b>'research scientist'</b></font> to do things like identify and evaluate algorithms for news feed ranking" </i></p>
+				    	<p class="fragment"> <i>"I was hired in 1Q06 with the same title 'research scientist', but my role quickly evolved into supporting the functions of the reporting and analytics group. Some time in 3Q06, Adam D'Angelo returned and we discussed changing the two groups to be focused on <font color="orange"><b>'Data Infrastructure'</b></font> and <font color="orange"><b>'Data Analytics'</b></font>, and in 4Q06 (I think) we merged them into the 'Data Team'." </i></p>
+				    </section>
+
+				    <section>
+				    	<h2>Since then, explosive growth in (job) opportunities</h2>
+						    <p align="center">
+							  <img src="job_growth.png" width="800" height="450" align="center">
+							</p>
+				    </section>
+
+				    <section>
+				    	<h2>Hype All Over Mainstream Media</h2>
+						    <p align="center">
+							  <img src="hbr.png" width="550" height="450" align="center">
+							</p>
+				    </section>
+
+				    <section>
+						“Big data is like teenage sex: everyone talks about it, nobody really knows how to do it, everyone thinks everyone else is doing it, so everyone claims they are doing it” — Dan Ariely
+				    </section>
+
+				    <section>
+				    	<h2> 其實這個領域還很新 </h2>
+				    	<p class="fragment"> <font color="orange"><b>我的比喻</b></font> </p>
+				    	<p class="fragment"> 跟 Software Engineering 剛開始ㄧ樣 </p>
+				    	<p class="fragment"> 初期所有人基本上都統稱 programmers, 工作與專業上並還沒有那麼細的分工. </p>
+				    	<p class="fragment"> 但當領域越來越成熟以後, 慢慢出現分工 </p>
+				    	<p class="fragment"> front-end, back-end, sys-ops, dev-prods ...etc. </p>
+				    	<p class="fragment"> 我的預測是 Data Science 也是ㄧ樣, 慢慢我們會有更清晰的分類和歸類 (Type A v.s. Type B). </p>
+				    	<p class="fragment"> But as of now, Data Science is still a nascent field. </p>
+				    </section>
+				</section>			
+
+				<section>
+					<section>
+						<h2>Working Definition of a DS?</h2>
+						<p> <font color="orange"><b>資料科學家的定義</b></font> </p>
+					    <p class="fragment"> How to tell A Fake Data Scientist From A Real One? </p>
+					</section>
+
+				    <section>
+				    	<h2> 你在哪裡工作啊? </h2>
+				    	<p class="fragment">"A data scientist is a data analyst who lives in San Franciso, California, working in Tech" </p>
+				    </section>
+
+				    <section>
+				    	<h2> 你用什麼工具啊? </h2>
+				    	<p class="fragment"> R, Python, Hadoop, Map-Reduce, Parallel Computing ...etc </p>
+				    	<p class="fragment" align="center">
+					  		<img src="excel_meme.png" width="550" height="500" align="center">
+						</p>
+					</section>
+
+					<section>
+				    	<h2> 所以到底如何定義呢? </h2>
+				    	<p class="fragment"> "All models are wrong but some are useful" - George Box </p>
+				    	<p class="fragment"> "All definitions are imperfect but some are insightful" </p>
+						
+					</section>
+
+				    <section>
+				    	<h2>My Favorite Definition</h2>
+				    	<p align="center">
+					  		<img src="josh_wills_df.png" width="750" height="400" align="center">
+						</p>
+				    </section>
+
+				    <section>
+				    	<h2>The Data Science Venn Diagram</h2>
+				    	<p align="center">
+					  		<img src="venn_diagram.png" width="500" height="480" align="center">
+						</p>
+				    </section>
+
+				    <section>
+				    	<h2>Data Scientists Come From All Kinds Of Background</h2>
+				    	<p class="fragment"> Some have advanced degree, others don't. Some from CS/Stats, others from Social Science </p>
+				    	<p class="fragment"> But always everyone has good <font color="orange"><b>statistical training</b></font>, and know how to use <font color="orange"><b>computational thinking</b></font> to solve problems </p>
+				    </section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2> What Do Data Scientists Do All Day? </h2>
+						<p> <font color="orange"><b>工作內容範疇到底是什麼呢?</b></font> </p>
+					</section>
+
+					<section>
+						<h2> Data Scientist 好比ㄧ位<font color="orange"><b>廚師</b></font> </h2>
+						<p class="fragment" align="center">
+					  		<img src="gordon.png" width="500" height="480" align="center">
+						</p>
+					</section>
+
+					<section>
+						<h2> 廚師的主要工作內容是什麼？</h2>
+						<p class="fragment"> 廚師的主要工作內容是<font color="orange"><b>作菜</b></font>, 目的是做出讓人感動的料理 </p>
+						<p class="fragment"> 這代表他/她 需要知道食材的<font color="orange"><b>來源</b></font>, 如何存放與保持它們的<font color="orange"><b>新鮮度</b></font> </p>
+						<p class="fragment"> 他/她 需要花精神<font color="orange"><b>擺盤</b></font>, 襯托食物的美味 </p>
+						<p class="fragment"> 有時候, 你甚至必須知道怎麼樣<font color="orange"><b>整理</b></font> 你的冰箱, 或是要買哪ㄧ牌的冰櫃 </p>
+					</section>
+
+					<section>
+						<h2> Data Scientist 好比ㄧ位<font color="orange"><b>廚師</b></font> </h2>
+						<p class="fragment"> Data Scientists 的主要工作內容是使用資料來<font color="orange"><b>做更好的決策跟產品</b></font> </p>
+						<p class="fragment"> 這代表他/她 需要知道資料的<font color="orange"><b>來源</b></font>, 如何存放與保持它們的<font color="orange"><b>正確度</b></font> </p>
+						<p class="fragment"> 他/她 需要花精神思考如何表達找到的 insights, 如何<font color="orange"><b>視覺化</b></font> 和說服 </p>
+						<p class="fragment"> 有時候, 你甚至必須知道怎麼樣整理你的 <font color="orange"><b>Data Warehouse</b></font>, 或是用哪ㄧ種 <font color="orange"><b>Technology stack</b></font> </p>
+					</section>
+
+					<section>
+						<h2> Analogy </h2>
+						<p class="fragment"> 資料 = 食材 </p>
+						<p class="fragment"> 正確度 = 新鮮度</b></font> </p>
+						<p class="fragment"> Visualization & Presentation = 擺盤 </p>
+						<p class="fragment"> Technology Stack = 冰箱 & 冰櫃 </p>
+					</section>
+
+					<section>
+						<h3> 延續這比喻: Data Scientists 的廚房大概長這樣子 </h3>
+				
+						<p class="fragment" align="center">
+								  		<img src="big_picture.png" width="680" height="550" align="center">
+						</p>
+					</section>
+
+					<section>
+						<h3> Data Infra @ Twitter </h3>
+						<p align="center">
+					  		<img src="twitter_infra.png" width="680" height="550" align="center">
+						</p>
+					</section>
+
+					<section>
+						<h3> Data Infra @ Airbnb </h3>
+						<p align="center">
+					  		<img src="airbnb_infra.png" width="680" height="400" align="center">
+						</p>
+					</section>
+
+					<section>
+						<h2> 工作範疇大致的歸類 </h2>
+						<p class="fragment"> <font color="lightblue"><b> Product Analytic (產品資料分析) </b></font></p>
+						<p class="fragment"> <font color="lightblue"><b> Building Data Pipeline (建立資料流程) </b></font></p>
+						<p class="fragment"> <font color="lightblue"><b> Experimentation (跑實驗) </b></font></p>
+						<p class="fragment"> <font color="lightblue"><b> Modeling (建立模型) </b></font></p>
+						<p class="fragment"> <font color="lightblue"><b> Win people's heart (推銷與溝通) </b></font></p>
+					</section>
+
+				</section>				
+
+				<section>
+
+					<section>
+						<h2> 工作範疇大致的歸類 </h2>
+						<p> <font color="lightblue"><b> Product Analytic (產品資料分析) </b></font></p>
+						<p> Building Data Pipeline (建立資料流程) </p>
+						<p> Experimentation (跑實驗) </p>
+						<p> Modeling (建立模型) </p>
+						<p> Win people's heart (推銷與溝通) </p>
+					</section>
+
+					<section>
+						<h2> Product Analytics </h2>
+						<h4> <font color="orange"><b>產品資料分析</b></font> </h4>
+						<p class="fragment"> One of the unique aspects of working for a consumer technology company is that whenever a user interacts with the product, we record useful data and metadata so we can analyze them to improve the product. </p>
+						<p class="fragment"> <font color="orange"><b>Logging</b></font> </p>
+						<p class="fragment"> <font color="orange"><b>Instrumentation</b></font> </p>
+					</section>
+
+					<section>
+						<h2> A Very Basic Logging Example </h2>
+						<pre><code class="python">
+import logging
+logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
+logging.warning('is when this event was logged.')
+
+# 12/30/2016 11:20:36 AM is when this event was logged.
+						</code></pre>
+
+					</section>
+
+					<section>
+						<h2> Sources of Logs </h2>
+						<p align="center">
+						  		<img src="logs.png" width="680" height="480" align="center">
+						</p>
+					</section>
+
+					<section>
+						<h2> Examples Of Product Analytics </h2>
+						<p class="fragment"> 1. Why Is There An Explosive User Growth This Month? </p>
+						<p class="fragment"> 2. What's The Average Retention For Product X? How Much Time Do They Spend Onsite? </p>
+						<p class="fragment"> 3. What Kind Of Guests Tend To Leave Bad Reviews For Their Trips? </p>
+						<p class="fragment"> 4. Are People Able To Find The Listings That They Want? </p>
+					</section>
+
+					<section>
+						<h2> Product Analytics </h2>
+						<h4> <font color="orange"><b>產品資料分析</b></font> </h4>
+						<p class="fragment"> Generating insights through product analysis is an <font color="orange"><b>iterative process</b></font>. It requires challenging the questions being asked, understanding the business context, and figuring out the <font color="orange"><b>right dataset</b></font> and the <font color="orange"><b>right questions</b></font> to ask. </p>
+					</section>
+
+					<section>
+						<h2> 產品資料分析所需要的能力 </h2>
+						<p class="fragment"> 1. <font color="orange"><b>Logging and Instrumentation</b></font>. Identifying Data Gaps. Establish good relationships with engineers </p>
+						<p class="fragment"> 2. Ability to <font color="orange"><b>navigate and identify</b></font> relevant datasets and how to use them </p>
+						<p class="fragment"> 3. Understand different types of analyses and get better at <font color="orange"><b>time estimates</b></font> on how long or difficult they will take </p>
+						<p class="fragment"> 4. Know your query language <font color="orange"><b>(SQL)</b></font>. Typical data munging skills using R or Python </p>
+					</section>
+				</section>
+
+				<section>
+
+					<section>
+						<h2> 工作範疇大致的歸類 </h2>
+						<p> Product Analytic (產品資料分析) </p>
+						<p> <font color="lightblue"><b> Building Data Pipeline (建立資料流程) </b></font> </p>
+						<p> Experimentation (跑實驗) </p>
+						<p> Modeling (建立模型) </p>
+						<p> Win people's heart (推銷與溝通) </p>
+					</section>
+
+					<section>
+						<h2> Building Data Pipelines </h2>
+						<h4> <font color="orange"><b>建立資料流程</b></font> </h4>
+						<p class="fragment"> Have you heard of the operation <font color="orange"><b> | </b></font> (pipe) from Unix? </p>
+						<p class="fragment" align="center">
+						  		<img src="pipe.png" width="600" height="350" align="center">
+						</p>
+					</section>
+
+					<section>
+						<h2> Building Data Pipelines </h2>
+						<h4> <font color="orange"><b>建立資料流程</b></font> </h4>
+						<p class="fragment"> A data pipeline is nothing but <font color="orange"><b>a series of operations streamed together</b></font>, which helps us to automatically capture, munge, and aggregate data so it can be used on a recurring basis. </p>
+					</section>
+
+					<section>
+						<h3> Remember This Picture! </h3>
+						<p align="center">
+					  		<img src="big_picture.png" width="680" height="550" align="center">
+						</p>
+					</section>
+
+					<section>
+						<h3> Building ETL Job </h3>
+						<p class="fragment"><font color="orange"><b>Many open-source tools out there:</b></font> Luigi (Spotify), Pinball (Pinterest), Airflow (Airbnb) ...etc, or just use plain old Cron </p>
+						<p class="fragment" align="center">
+					  		<img src="https://airflow.incubator.apache.org/_images/airflow.gif" width="680" height="450" align="center">
+						</p>
+					</section>
+
+					<section>
+						<h3> A Real Life Example </h3>
+						<p class="fragment" align="center">
+					  		<img src="pipeline.png" width="680" height="400" align="center">
+						</p>
+						<p class="fragment"> An ETL Job is often represented as a <font color="orange"><b>DAG (Directed Acyclic Graph)</b></font>, the graph consists of tasks/nodes, and each task perform a specific set of data operations </p>
+					</section>
+
+					<section>
+						<h4> Each task executes a specific set of operations </h4>
+						<p class="fragment" align="center">
+					  		<img src="pipeline_sql.png" width="680" height="380" align="center">
+						</p>
+						<p class="fragment"> The end result is that we have a reliable <font color="orange"><b>batch job</b></font> that computes the same metrics we want everyday </p>
+					</section>
+
+					<section>
+						<h3> Why Bother Building Data Pipelines? </h3>
+						<p class="fragment"> Jobs can now be run automatically, the data produced can be used to power <font color="orange"><b>dashboards</b></font> so more users can consume your data/results. (自動化) </p>
+						<p class="fragment"> A subtle but more important point, this is a great <font color="orange"><b>learning process</b></font> to pick up engineering best practices such as <font color="orange"><b> Don't repeat yourself, Modularization, Abstractions. </b></font> (學習 Software Engineering) </p>
+						<p class="fragment"> It provides the <font color="orange"><b>foundation</b></font> for building more specialized pipelines such as Machine Learning or A/B testing. </p>
+					</section>
+
+					<section>
+						<h2> <font color="orange"><b>建立資料流程所需要的能力</b></font> </h2>
+						<p class="fragment"> 1. <font color="orange"><b>Version control</b></font> - the most popular by far is <font color="orange"><b>Git</b></font> </p>
+						<p class="fragment"> 2. Learn how to do <font color="orange"><b>code reviews</b></font> and provide feedbacks effectively </p>
+						<p class="fragment"> 3. Know how to <font color="orange"><b>test</b></font>, dry-run, and debug when job fails </p>
+						<p class="fragment"> 4. <font color="orange"><b>Dependency management</b></font>, Scheduling, Resource Allocation, Monitoring, Error Reporting, Alerting </p>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+						<h2> 工作範疇大致的歸類 </h2>
+						<p> Product Analytic (產品資料分析) </p>
+						<p> Building Data Pipeline (建立資料流程) </p>
+						<p> <font color="lightblue"><b> Experimentation (跑實驗) </b></font></p>
+						<p> Modeling (建立模型) </p>
+						<p> Win people's heart (推銷與溝通) </p>
+					</section>
+
+					<section>
+						<h2> Experimentation </h2>
+						<h4> <font color="orange"><b>跑實驗</b></font> </h4>
+						<p class="fragment" align="center">
+						  		<img src="counterfactual.png" align="center">
+						</p>
+					</section>
+
+					<section>
+						<h2> Experimentation </h2>
+						<h4> <font color="orange"><b>跑實驗</b></font> </h4>
+						<p class="fragment"> How to tell if the products we built/want to build is beneficial to the users? </p>
+						<p class="fragment" align="center">
+						  		<img src="http://www.enricdurany.com/wp-content/uploads/2015/11/0729232.jpg" align="center">
+						</p>
+					</section>
+
+					<section>
+						<h2> Experimentation </h2>
+						<h4> <font color="orange"><b>跑實驗</b></font> </h4>
+						<p class="fragment"> Direct a small % of <font color="orange"><b>user traffic</b></font> to the new experience, and compare their behaviors to those who continued to see the old experience (the control group) — this is known as <font color="orange"><b>A/B testing</b></font>, where we get to test which variant, A or B, is better. </p>
+						<p class="fragment" align="center">
+						  		<img src="http://nerds.airbnb.com/wp-content/uploads/2014/05/img7_magellan.png" align="center">
+						</p>
+					</section>
+
+					<section>
+						<h2> Experimentation </h2>
+						<h4> <font color="orange"><b>跑實驗</b></font> </h4>
+						<p class="fragment"> To separate noise from real signals, we need <font color="orange"><b>hypothesis testing</b></font> and <font color="orange"><b>statistical thinking</b></font> </p>
+						<p class="fragment" align="center">
+						  		<img src="power.png" width="500" height="400" align="center">
+						</p>
+					</section>
+
+					<section>
+						<h2> Experimentation </h2>
+						<h4> <font color="orange"><b>跑實驗</b></font> </h4>
+						<p class="fragment"> We keep track of <font color="orange"><b>p-value</b></font> and and the <font color="orange"><b>treatment effect</b></font> to understand the overall impact </p>
+						<p class="fragment" align="center">
+						  		<img src="http://nerds.airbnb.com/wp-content/uploads/2014/05/img5_max_price_results.png" width="600" height="380" align="center">
+						</p>
+					</section>
+
+					<section>
+						<h2> Experimentation </h2>
+						<h4> <font color="orange"><b>跑實驗</b></font> </h4>
+						<p class="fragment"> It's worth pointing out that, because we built an A/B testing pipeline for the company, we don't have to do everything by hand :)</p>
+						<p class="fragment" align="center">
+						  		<img src="stat_r.png" width="600" height="380" align="center">
+						</p>
+					</section>
+
+					<section>
+						<h2> Experimentation </h2>
+						<h4> <font color="orange"><b>跑實驗</b></font> </h4>
+						<p class="fragment"> The ability to run experiments breaks a lot of the limitation in traditional social science research, where techniques such as <font color="orange"><b>causal inference</b></font> are heavily leveraged when RCE is not possible. </p>
+						<p class="fragment"> The ability to run massive experiment to improve product and decision making is, in my opinion, one of the most <font color="orange"><b>scientific aspects</b></font> of our work. </p>
+					</section>
+
+					<section>
+						<h2> <font color="orange"><b>跑實驗所需要的能力</b></font> </h2>
+						<p class="fragment"> <font color="orange"><b>Hypothesis Testing:</b></font> Statistical test, p-values, statistical significance, power, effect size, multiple testing </p>
+						<p class="fragment"> <font color="orange"><b>Pitfalls of Experimentation:</b></font> Carryover effect, metrics cherry-picking, data dilution, bucket anomaly </p>
+						<p class="fragment"> When a randomized controlled experiment is not possible, use <font color="orange"><b>Causal Inference</b></font> techniques - difference in difference, instrumental variable, regression discontinuity design, market level experiments ...etc </p>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+						<h2> 工作範疇大致的歸類 </h2>
+						<p> Product Analytic (產品資料分析) </p>
+						<p> Building Data Pipeline (建立資料流程) </p>
+						<p> Experimentation (跑實驗) </p>
+						<p> <font color="lightblue"><b> Modeling (建立模型) </b></font> </p>
+						<p> Win people's heart (推銷與溝通) </p>
+					</section>
+
+					<section>
+						<h2> Modeling </h2>
+						<h4> <font color="orange"><b>建立模型</b></font> </h4>
+						<p class="fragment"> Broadly speaking, when we refer to modeling, we mean building <font color="orange"><b>"Machine Learning" (機器學習)</b></font> models or <font color="orange"><b>"Predictive Models"</b></font> </p>
+						<p class="fragment"> These models are often used to power <font color="orange"><b>data products</b></font> or are used as inputs for other <font color="orange"><b>complex systems</b></font> </p>
+					</section>
+
+					<section>
+						<h2> Examples In The Industry </h2>
+						<p class="fragment"> People You May Know <font color="blue"><b>(Facebook)</b></font> </p>
+						<p class="fragment"> Customers Who Bought This Item Also Bought <font color="orange"><b>(Amazon)</b></font> </p>
+						<p class="fragment"> While You Are Away <font color="lightblue"><b>(Twitter)</b></font> </p>
+						<p class="fragment"> Pricing Tips <font color="FF5A5F"><b>(Airbnb)</b></font> </p>
+					</section>
+
+					<section>
+						<h2> Example @ Airbnb: Pricing Tips </h2>
+						<p class="fragment" align="center">
+						  		<img src="https://lh6.googleusercontent.com/yp6ldAxU8NJqFzIF8BASsEWkwoHNouGAfW6Ko8wPt1rPil-zf6KMWzEYqqnuip-OKNf9NINnvvIgQ3DZ3IdCpxLIc7j6DUS9OvPlzi8BoohKuhG4wCSXCBmFVsvSZ4FnwqVEcJ8" width="650" height="350" align="center">
+						</p>
+					</section>
+
+					<section>
+						<h2> Example @ Airbnb: Pricing Tips </h2>
+						<p class="fragment"> Additive Model: Outcome is the Probability of Booking, as a function of many features, location, listing, prices ...etc </p>
+						<p class="fragment" align="center">
+						  		<img src="https://lh5.googleusercontent.com/bBEohcUmmEzkzLn-09yNlKphhXqw3w2K03AVEAoySaS9AOs1LWw5QQ0Jw3qJEcB8WxPFNqgYfin2PwDuwk882y067jqSmzDuJv8iU3CMQ4ZVTt9DQA1w_UAfruienzXsYL-heGA" width="600" height="450" align="center">
+						</p>
+					</section>
+
+					<section>
+						<h2> Listing Revenue Prediction </h2>
+						<p class="fragment"> Goal is to develop a general for the accurate prediction of individual <font color="orange"><b>customer lifetime value</b></font>. CLTV predictions would help us to better identify high value hosts, to set more data informed CPA targets, and to calculate program efficiency more precisely. </p>
+						<p class="fragment"> In other words, if you have a new listing on Airbnb, can we predict <font color="orange"><b>NOW</b></font> how profitable/attractive in would be <font color="orange"><b>in the year ahead</b></font>? </p>
+					</section>
+
+					<section>
+						<h2> Listing Revenue Prediction </h2>
+						<p class="fragment"> Step 1: Define the Training Data (label, features) </p>
+						<p class="fragment"> Step 2: Perform Exploratory Data Analysis to understand what features correlate with revenues? </p>
+						<p class="fragment"> Step 3: Write Data Pipeline to Compute/Generate Features </p>
+						<p class="fragment"> Step 4: Train Machine Learning Models </p>
+						<p class="fragment"> Step 5: Evaluate Model Performance </p>
+						<p class="fragment"> Step 6: Rinse and Repeat Until We have a "good model" </p>
+					</section>
+
+					<section>
+						<h4> Step 1-3: Defining And Creating Training Data </h4>
+						<p class="fragment" align="center">
+						  		<img src="training_repo.png" width="600" height="450" align="center">
+						</p>
+					</section>
+
+					<section>
+						<h4> Step 4: Train Machine Learning Models </h4>
+						<p class="fragment" align="center">
+						  		<img src="scikit-learn-pipeline.png" width="1000" height="320" align="center">
+						</p>
+					</section>
+
+					<section>
+						<h4> Step 4: Train Machine Learning Models </h4>
+						<pre><code class="python">
+from sklearn.pipeline import Pipeline
+from sklearn.ensemble import RandomForestClassifier
+
+rf_pipeline = Pipeline([
+              ('transformer_keep_only_numeric_columns', NumericColumnExtractor(['float64', 'int64'])),
+              ('transformer_remove_location_features', FeatureRemover(rm_cols)),
+              ('transformer_impute_numeric_features', CustomNumericImputer(numeric_cols)),
+              ('transformer_impute_categorical_features', CustomCategoricalImputer(cat_cols)),
+              ('transformer_one_hot_encoding', CustomOneHotEncoder(cat_cols)),
+              ('transformer_remove_redundant_categorical_features', FeatureRemover(cat_cols)),
+              ('estimator', RandomForestClassifier(n_estimators = 200, n_jobs = -1))
+      ])
+
+...
+
+import matplotlib.pyplot as plt
+print "Confusion Matrix:"
+print metrics.confusion_matrix(rf_actual_labels, rf_prediction_labels)
+print "\n"
+
+print "Classification Report:"
+print metrics.classification_report(rf_actual_labels, rf_prediction_labels)
+print "\n"
+
+fpr, tpr, thresholds = metrics.roc_curve(rf_actual_labels, rf_prediction_probs)
+roc_auc = metrics.auc(fpr, tpr)
+plt.plot(fpr, tpr, lw=2, color='blue', label='AUC = %0.2f)' % (roc_auc))
+plt.plot([0, 1], [0, 1], linestyle='--', lw=2, color='k', label='Baseline')
+plt.xlim([-0.05, 1.05])
+plt.ylim([-0.05, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('ROC Curve - Random Forest Classifier Model')
+plt.legend(loc="lower right")
+						</code></pre>
+					</section>
+
+					<section>
+						<h4> Step 5: Evaluate Model Performance </h4>
+						<p class="fragment" align="center">
+						  		<img src="roc.png" width="600" height="400" align="center">
+						</p>
+					</section>
+
+					<section>
+						<h4> <font color="orange"><b>建立模型</b></font> </h4>
+						<p class="fragment"> <font color="orange"><b>Pattern Recognition:</b></font> Identifying problems that can be solved using modeling technique </p>
+						<p class="fragment"> <font color="orange"><b>All the basics of modeling and ML:</b></font> Exploratory data analysis, building features, feature selection, model selection, training/validation/testing, model evaluation </p>
+						<p class="fragment"> <font color="orange"><b>Productionization:</b></font> all the things mentioned above about data pipeline. Set up your ouput so it can be query by different people and services </p>
+					</section>
+
+				</section>
+
+
+				<section>
+
+					<section>
+						<h2> Becoming A Data Scientist </h2>
+						<h4> <font color="orange"><b>我要如何才能成為ㄧ位資料科學家呢?</b></font> </h4>
+					</section>
+						
+					<section>
+						<h2> Becoming A Data Scientist </h2>
+						<h4> <font color="orange"><b> Perform Due Dilligence </b></font> </h4>
+						<p class="fragment"> Explore more before you jump in, talk to people, learn from their experiences </p>
+						<p class="fragment"> 大學的目的就是要多方探索! 多多學習! </p>
+						<p class="fragment"> 去跟你欣賞的學長姊, 老師, 業界前輩們討教, 他們為何會走上這條路, 成功的秘訣是什麼? </p>
+						<p class="fragment"> 花時間去做 <font color="orange"><b>informational interview</b></font>, 你會找出基礎技能是什麼,甚至是成功的脈絡 </p>
+					</section>
+
+					<section>
+						<h2> Becoming A Data Scientist </h2>
+						<h4> <font color="orange"><b>Focus On the Fundamentals</b></font> </h4>
+						<p class="fragment"> 基礎功真的很重要, 避免好高騖遠的心態 </p>
+						<p class="fragment"> 什麼是基本功呢: Math, Statistics, Computer Science 基礎課程. </p>
+						<p class="fragment"> ㄧ定要學好英文! ㄧ定要學好英文! ㄧ定要學好英文! </p>
+						<p class="fragment"> (戰) 不要 Double Major, ㄧ次把ㄧ件事做好不只 high leverage, 對長期 career track record 也比較有幫助 </p>
+					</section>
+
+					<section>
+						<h2> Becoming A Data Scientist </h2>
+						<h4> <font color="orange"><b> Build Your Own Learning Projects </b></font> </h4>
+						<p class="fragment"> 當你知道你想成為什麼樣的 Data Scientist, 也知道基本功是哪些時... </p>
+						<p class="fragment"> Set aside time to work on your own projects, learn by doing </p>
+						<p class="fragment"> Practice deliberately, get feedback </p>
+						<p class="fragment"> 反省自己還有哪裡可以進步 </p>
+						<p class="fragment"> "A little bit of slope makes up for a lot of y-intercept" - John Ousterhout, CS Professor @ Stanford </p>
+					</section>
+
+					<section>
+						<h2> Becoming A Data Scientist </h2>
+						<h4> <font color="orange"><b> Never Stop Improving </b></font> </h4>
+						<p class="fragment"> 當你越來越強時, 你會有越多機會接觸厲害的人 </p>
+						<p class="fragment"> 當你越來越強時, 你會有越多機會去更好的環境</p>
+						<p class="fragment"> Don't stop there, find the best people, don't be ashame to ask for help! </p>
+					</section>
+
+					<section>
+						<h2> Becoming A Data Scientist </h2>
+						<h4> <font color="orange"><b> Give Back </b></font> </h4>
+						<p class="fragment"> 當你累積ㄧ定的實力的時候 </p>
+						<p class="fragment"> 記得感謝那些幫助你的人 </p>
+						<p class="fragment"> 更重要的是,幫助那些跟你在ㄧ樣道路上, 但慢你幾步的人 </p>
+					</section>
+
+					<section>
+						<h2> Becoming A Data Scientist </h2>
+						<h4> <font color="orange"><b> Summary </b></font> </h4>
+						<p class="fragment"> 1. 多方探索! 多多學習! </p>
+						<p class="fragment"> 2. 多向有實力,謙虛,願意教導你的人學習 </p>
+						<p class="fragment"> 3. 打好基礎, 基礎功 can take you a long way </p>
+						<p class="fragment"> 4. 努力學習, create learning projects, practice deliberately </p>
+						<p class="fragment"> 5. 到更強的地方, 不要害怕承認自己不懂, 向更強的人學習 </p>
+						<p class="fragment"> 6. 記得感恩, 更要記得回饋 </p>
+					</section>
+
+				</section>
+
+				<section>
+					<h2> That's It! </h2>
+					<p> 感謝大家寶貴的時間! 也謝謝孔哥,令傑老師的邀請. Contact me @ </p>
+					<p> <font color="orange"><b> robert8138@gmail.com </b></font> </p>
+					<p> <font color="orange"><b> Linkedin: Robert Chang, Twitter, Airbnb </b></font> </p>
+					<p> <font color="orange"><b> Twitter: @_rchang </b></font> </p>
+					<p> <font color="orange"><b> Facebook: robert8138 </b></font> </p>
+					
+
+				</section>
+
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
